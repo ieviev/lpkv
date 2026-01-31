@@ -1,0 +1,27 @@
+{
+  "name": "lpkv",
+  "version": "0.1.0",
+  "description": "Lightweight packed key-value store",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:wasm": "cd ../rust && wasm-pack build --target web --out-dir ../npm/wasm",
+    "build:ts": "tsc",
+    "build": "npm run build:wasm && npm run build:ts",
+    "clean": "rm -rf dist wasm"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "kv",
+    "key-value",
+    "wasm",
+    "binary"
+  ],
+  "license": "MIT"
+}
