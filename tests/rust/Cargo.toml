@@ -1,0 +1,10 @@
+[package]
+name = "lpkv-tests"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lpkv = { path = "../../rust" }
+
+[dev-dependencies]
+proptest = "1.4"
